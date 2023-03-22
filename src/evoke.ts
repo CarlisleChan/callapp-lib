@@ -35,7 +35,9 @@ function isPageHidden(): boolean {
  * @param {string}} [uri] - 需要打开的地址
  */
 export function evokeByLocation(uri: string): void {
-  window.top.location.href = uri;
+  if (uri) {
+    window.top.location.href = uri;
+  }
 }
 
 /**
